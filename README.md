@@ -1,3 +1,11 @@
+# Demo
+[Live Demo](https://shanesleeman.github.io/shopping-cart-react)
+
+# Description
+A shopping page that simulates adding items to a cart.
+
+Uses React routers, to load different pages.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
