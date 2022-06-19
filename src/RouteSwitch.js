@@ -5,6 +5,7 @@ import Shoppage from "./components/Shoppage";
 import Nav from "./components/Nav";
 import React, {useState, useEffect} from "react";
 import ShopItem from "./components/ShopItem";
+import './styles/routeswitch.css';
 
 const RouteSwitch = () => {
   const [cartItems, setCartItems] = useState([]);
