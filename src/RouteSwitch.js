@@ -38,9 +38,15 @@ const RouteSwitch = () => {
 
   function removeCartItem(e) {
     if(e.target.id.charAt(0) == "r") {
-      let selected = e.target.id.substr(1, e.target.id.length);
-      let cartCopy = cartItems.filter(item => item !== cartItems[+selected]);
-      setCartItems(empty => cartCopy);
+      let selected = e.target.id.substring(1, e.target.id.length);
+
+      let cartCopy = cartItems;
+      let half1 = cartCopy.slice(0, +selected);
+      let half2 = cartCopy.slice(+selected + 1, cartCopy.length);
+      let newCart = half1.concat(half2);
+
+      let empty = [];
+      setCartItems(cartItems => newCart);
     }
   }
 
