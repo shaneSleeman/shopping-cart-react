@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import '../styles/nav.css';
-import cartIcon from '../assets/cart.svg';
+import cartIcon from '../cart.svg';
 
 const Nav = ({cartCount}) => {
     return (
