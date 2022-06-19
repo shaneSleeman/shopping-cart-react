@@ -42,6 +42,7 @@ const RouteSwitch = () => {
   }
 
   function test(e) {
+    console.log(e.target.id)
     if(e.target.id.charAt(0) == "r") {
       let selected = e.target.id.substr(1, e.target.id.length);
       let cartCopy = cartItems.filter(item => item !== cartItems[+selected]);
