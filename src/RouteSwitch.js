@@ -30,40 +30,36 @@ const RouteSwitch = () => {
       <ShopItem image="https://source.unsplash.com/200x200/?hoodie" description="Jacket 3" price="30" sid="14"/>
     ];
     let shopItemsAppend = [
-              <div>{items[0]}</div>,
-              <div>{items[1]}</div>,
-              <div>{items[2]}</div>,
-              <div>{items[3]}</div>,
-              <div>{items[4]}</div>,
-              <div>{items[5]}</div>,
-              <div>{items[6]}</div>,
-              <div>{items[7]}</div>,
-              <div>{items[8]}</div>,
-              <div>{items[9]}</div>,
-              <div>{items[10]}</div>,
-              <div>{items[11]}</div>,
-              <div>{items[12]}</div>,
-              <div>{items[13]}</div>,
-              <div>{items[14]}</div>
+              <div onClick={addCartItem}>{items[0]}</div>,
+              <div onClick={addCartItem}>{items[1]}</div>,
+              <div onClick={addCartItem}>{items[2]}</div>,
+              <div onClick={addCartItem}>{items[3]}</div>,
+              <div onClick={addCartItem}>{items[4]}</div>,
+              <div onClick={addCartItem}>{items[5]}</div>,
+              <div onClick={addCartItem}>{items[6]}</div>,
+              <div onClick={addCartItem}>{items[7]}</div>,
+              <div onClick={addCartItem}>{items[8]}</div>,
+              <div onClick={addCartItem}>{items[9]}</div>,
+              <div onClick={addCartItem}>{items[10]}</div>,
+              <div onClick={addCartItem}>{items[11]}</div>,
+              <div onClick={addCartItem}>{items[12]}</div>,
+              <div onClick={addCartItem}>{items[13]}</div>,
+              <div onClick={addCartItem}>{items[14]}</div>
     ];
 
     let empty = [];
     setShopItems(empty => shopItemsAppend);
-    
-    const body = document.querySelector("body");
-    body.addEventListener("click", addCartItem);
 
     function addCartItem(e) {
-      e.stopPropagation();
-      const ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
-      if(ids.includes(e.target.id)) {
-        setCartItems(cartItems => [...cartItems, items[e.target.id]]);
-      }
-      else if(e.target.id.charAt(0) == "r") {
-        let selected = e.target.id.substr(1, e.target.id.length);
-        let cartCopy = cartItems.filter(item => item !== cartItems[selected]);
-        setCartItems(empty => cartCopy);
-      }
+        const ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+        if(ids.includes(e.target.id)) {
+          setCartItems(cartItems => [...cartItems, items[e.target.id]]);
+        }
+        else if(e.target.id.charAt(0) == "r") {
+          let selected = e.target.id.substr(1, e.target.id.length);
+          let cartCopy = cartItems.filter(item => item !== cartItems[+selected]);
+          setCartItems(empty => cartCopy);
+        }
     }
   }, [])
 
