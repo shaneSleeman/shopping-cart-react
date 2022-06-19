@@ -5,7 +5,7 @@ import cartIcon from '../assets/cart.svg';
 const Nav = ({cartCount}) => {
     return (
         <div className="nav">
-            <div className="navTitle">Shopping Cart</div>
+            <Link className="links" to="/"><div className="navTitle">Shopping Cart</div></Link>
             <div className="navLinks">
                 <div className="navLinks1">
                     <Link className="links" to="/">Home</Link>
@@ -13,8 +13,8 @@ const Nav = ({cartCount}) => {
                 </div>
                 <div className="navLinks2">
                     <Link className="links" to="/cartpage">Cart</Link>
-                    <img className="cartIcon" src={cartIcon} />
-                    <div className="cartItems">{cartCount}</div>
+                    <Link className="links" to="/cartpage"><img className="cartIcon" src={cartIcon} /></Link>
+                    <Link className="links" to="/cartpage"><div className="cartItems">{cartCount}</div></Link>
                 </div>
             </div>
             
