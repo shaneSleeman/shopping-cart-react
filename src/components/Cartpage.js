@@ -12,7 +12,7 @@ const Cartpage = ({clickFunction, cart}) => {
             totalCopy += +cart[i].props.price;
         }
         setTotal(totalCopy);
-    }, [])
+    }, [clickFunction])
 
     return (
         <div className="cartPage">

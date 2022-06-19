@@ -33,16 +33,9 @@ const RouteSwitch = () => {
     if(ids.includes(e.target.id)) {
       setCartItems(cartItems => [...cartItems, items[e.target.id]]);
     }
-    /*
-    else if(e.target.id.charAt(0) == "r") {
-      let selected = e.target.id.substr(1, e.target.id.length);
-      let cartCopy = cartItems.filter(item => item !== cartItems[+selected]);
-      setCartItems(empty => cartCopy);
-    }*/
   }
 
-  function test(e) {
-    console.log(e.target.id)
+  function removeCartItem(e) {
     if(e.target.id.charAt(0) == "r") {
       let selected = e.target.id.substr(1, e.target.id.length);
       let cartCopy = cartItems.filter(item => item !== cartItems[+selected]);
@@ -79,7 +72,7 @@ const RouteSwitch = () => {
       <Nav cartCount={cartItems.length}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/cartpage" element={<Cartpage clickFunction={test} cart={cartItems}/>} />
+        <Route path="/cartpage" element={<Cartpage clickFunction={removeCartItem} cart={cartItems}/>} />
         <Route path="/shoppage" element={<Shoppage items={shopItems}/>} />
       </Routes>
     </BrowserRouter>
