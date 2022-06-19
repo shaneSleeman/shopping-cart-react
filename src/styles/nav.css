@@ -30,6 +30,11 @@
     text-decoration: inherit;
 }
 
+.links:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
 .navLinks2 {
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,8 @@
 
 .cartIcon {
     filter: invert(100%);
+    display: flex;
+    align-items: center;
 }
 
 .cartItems {
