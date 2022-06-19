@@ -7,7 +7,7 @@ const Homepage = () => {
         <div className="home">
             <div className="welcome">
                 <div className="welcomeText">
-                    Browse our collection of exclusive, affordable items.
+                    Browse our collection of exclusive, affordable clothing.
                 </div>
                 <Link className="links2" to="/shoppage">
                     <div className="shopButton">
