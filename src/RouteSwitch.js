@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="page">
       <Nav cartCount="0"/>
       <Routes>
         <Route path="/" element={<Homepage />} />
