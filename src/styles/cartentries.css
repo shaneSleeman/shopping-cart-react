@@ -1,0 +1,29 @@
+.cartEntries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cartEntry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 30vw;
+    padding: 20px;
+}
+
+.cartEntry:hover {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+}
+
+.cartEntryPrice {
+    font-size: 1.5rem;
+}
+
+.cartEntryDesc {
+    font-size: 1.1rem;
+}
