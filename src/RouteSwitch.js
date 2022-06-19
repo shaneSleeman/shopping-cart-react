@@ -75,7 +75,7 @@ const RouteSwitch = () => {
   }, [])
 
   return (
-    <BrowserRouter className="page">
+    <BrowserRouter basename="/" className="page">
       <Nav cartCount={cartItems.length}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
