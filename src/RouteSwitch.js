@@ -8,7 +8,7 @@ import Nav from "./components/Nav";
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav cartCount="0"/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/cartpage" element={<Cartpage />} />
